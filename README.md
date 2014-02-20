@@ -1,2 +1,2 @@
-freescale-intelligent-car
+Source code of our Freescale Intelligent Car
 =========================
