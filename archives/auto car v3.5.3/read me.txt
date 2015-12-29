@@ -1,0 +1,15 @@
+READ ME
+change history:
+[v3.2]在angle_controller的主控制程序中，修正了当offset[j]为0时作分母被1除的bug；
+在angle_controller的主控制程序中，增加了对边界edge_line[j]在赛道图像中的位置检测，如果边界一半以上位于赛道图像的下半部，说明赛车即将冲出赛道，需要急转弯回赛道；
+[v3.3]video_signal_sampling中修改了信号采集内容，改为采集从130到229中的偶数行（共50行）；
+在angle_controller的主控制程序中，排除了offset[j]为0的情况；
+屏蔽了在angle_controller的主控制程序中，增加了对边界edge_line[j]在赛道图像中的位置检测；
+[v3.4]video_signal_sampling中修改了信号采集内容，改为采集从130到259中的偶数行（共65行）；
+增加了对十字路口的判断方法；
+[v3.5]重构，清晰化了angle_controller的主控制程序offsetFinder，明确了该过程的4个主要步骤，及各个步骤对应的典型数据；
+在新offsetFinder中增加了pure_offset数组来保存纯粹有效的横向偏移量数据，进而在步骤4中大幅简化了对十字路口的判断方法；
+[v3.5.1]在新offsetFinder中增加了压线自动调整；
+[v3.5.2]对车子参数进行了调整；
+[v3.5.3]在新offsetFinder中增加了出界检测；
+将v3.5.1中的压线自动调整重命名为压线检测，并同出界检测、十字路口，一同作为步骤4的检测内容；

@@ -1,0 +1,4 @@
+READ ME
+what's new?
+在angle_controller的主控制程序中，修正了当offset[j]为0时作分母被1除的bug；
+在angle_controller的主控制程序中，增加了对边界edge_line[j]在赛道图像中的位置检测，如果边界一半以上位于赛道图像的下半部，说明赛车即将冲出赛道，需要急转弯回赛道；
